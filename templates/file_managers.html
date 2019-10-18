@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>    <html class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>    <html class="lt-ie9"> <![endif]-->
+<html>
+{% include 'head.html' %}
+<body>
+{% include 'menu.html' %}
+
+<!-- Start Content -->
+<div class="container-fluid fixed">
+
+
+    <div id="content">
+        <div class="separator"></div>
+
+        <h3 class="glyphicons suitcase"><i></i> 文件管理</h3>
+
+        <div class="widget widget-2">
+            <div class="widget-head">
+                <h4 class="heading glyphicons file_import"><i></i>文件管理员</h4>
+            </div>
+            <div class="widget-body">
+                <form id="pluploadForm"/>
+                <div id="pluploadUploader">
+                    <p>You browser doesn't have Flash, Silverlight, Gears, BrowserPlus or HTML5 support.</p>
+                </div>
+                </form>
+            </div>
+        </div>
+        <br/>
+        <br/>
+
+    </div>
+
+</div>
+
+<!-- JQueryUI v1.9.2 -->
+<script src="static/theme/scripts/jquery-ui-1.9.2.custom/js/jquery-ui-1.9.2.custom.min.js"></script>
+
+<!-- JQueryUI Touch Punch -->
+<!-- small hack that enables the use of touch events on sites using the jQuery UI user interface library -->
+<script src="static/theme/scripts/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script>
+
+<!-- MiniColors -->
+<script src="static/theme/scripts/jquery-miniColors/jquery.miniColors.js"></script>
+
+<!-- Themer -->
+<script>
+    var themerPrimaryColor = '#71c39a';
+</script>
+<script src="static/theme/scripts/jquery.cookie.js"></script>
+<script src="static/theme/scripts/themer.js"></script>
+
+
+<!-- Resize Script -->
+<script src="static/theme/scripts/jquery.ba-resize.js"></script>
+
+<!-- Uniform -->
+<script src="static/theme/scripts/pixelmatrix-uniform/jquery.uniform.min.js"></script>
+
+<!-- Bootstrap Script -->
+<script src="static/bootstrap/js/bootstrap.min.js"></script>
+
+<!-- Bootstrap Extended -->
+<script src="static/bootstrap/extend/bootstrap-select/bootstrap-select.js"></script>
+<script src="static/bootstrap/extend/bootstrap-toggle-buttons/static/js/jquery.toggle.buttons.js"></script>
+<script src="static/bootstrap/extend/bootstrap-hover-dropdown/twitter-bootstrap-hover-dropdown.min.js"></script>
+<script src="static/bootstrap/extend/jasny-bootstrap/js/jasny-bootstrap.min.js" type="text/javascript"></script>
+<script src="static/bootstrap/extend/jasny-bootstrap/js/bootstrap-fileupload.js" type="text/javascript"></script>
+<script src="static/bootstrap/extend/bootbox.js" type="text/javascript"></script>
+<script src="static/bootstrap/extend/bootstrap-wysihtml5/js/wysihtml5-0.3.0_rc2.min.js" type="text/javascript"></script>
+<script src="static/bootstrap/extend/bootstrap-wysihtml5/js/bootstrap-wysihtml5-0.0.2.js"
+        type="text/javascript"></script>
+
+<!-- Custom Onload Script -->
+<script src="static/theme/scripts/load.js"></script>
+
+<!-- Third party script for BrowserPlus runtime (Google Gears included in Gears runtime now) -->
+<script type="text/javascript" src="http://bp.yahooapis.com/2.4.21/browserplus-min.js"></script>
+
+<!-- Load plupload and all it's runtimes and finally the jQuery queue widget -->
+<script type="text/javascript" src="static/theme/scripts/plupload/js/plupload.full.js"></script>
+<script type="text/javascript"
+        src="static/theme/scripts/plupload/js/jquery.plupload.queue/jquery.plupload.queue.js"></script>
+
+<script type="text/javascript">
+    // Convert divs to queue widgets when the DOM is ready
+    $(function () {
+        $("#pluploadUploader").pluploadQueue({
+            // General settings
+            runtimes: 'gears,browserplus,html5',
+            url: 'theme/scripts/plupload/examples/upload.php',
+            max_file_size: '10mb',
+            chunk_size: '1mb',
+            unique_names: true,
+
+            // Resize images on clientside if we can
+            resize: {width: 320, height: 240, quality: 90},
+
+            // Specify what files to browse for
+            filters: [
+                {title: "Image files", extensions: "jpg,gif,png"},
+                {title: "Zip files", extensions: "zip"}
+            ],
+
+            // Flash settings
+            flash_swf_url: 'theme/scripts/plupload/js/plupload.flash.swf',
+
+            // Silverlight settings
+            silverlight_xap_url: 'theme/scripts/plupload/js/plupload.silverlight.xap'
+        });
+
+        // Client side form validation
+        $('#pluploadForm').submit(function (e) {
+            var uploader = $('#pluploadUploader').pluploadQueue();
+
+            // Files in queue upload them first
+            if (uploader.files.length > 0) {
+                // When all files are uploaded submit form
+                uploader.bind('StateChanged', function () {
+                    if (uploader.files.length === (uploader.total.uploaded + uploader.total.failed)) {
+                        $('#pluploadForm').submit();
+                    }
+                });
+
+                uploader.start();
+            } else {
+                alert('You must queue at least one file.');
+            }
+
+            return false;
+        });
+    });
+</script>
+
+</body>
+{% include 'buttom.html' %}
+</html>

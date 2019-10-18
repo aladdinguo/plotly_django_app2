@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>    <html class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>    <html class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+{% include 'head.html' %}
+<body>
+    {% include 'menu.html' %}
+
+<!-- Start Content -->
+<div class="container-fluid fixed"><!--这个div是固定宽度放在屏幕中间区域-->
+    <div id="content">
+        <div class="separator"></div>
+
+        <h3 class="glyphicons charts"><i></i>视图<span>| 静态图形</span></h3>
+        <div class="separator line"></div>
+
+        <div class="widget widget-4 widget-body-white">
+            <div class="widget-head">
+                <h4 class="heading">简单的图表</h4>
+            </div>
+
+            {% if graph_basic_plot %}
+                <div>
+                    {{ graph_basic_plot|safe }}
+                </div>
+            {% endif %}
+
+
+        </div>
+
+        <div class="widget widget-4 widget-body-white">
+            <div class="widget-head">
+                <h4 class="heading">Lines chart with fill & without points</h4>
+            </div>
+
+            {% if graph_line_full %}
+                <div>
+                    {{ graph_line_full|safe }}
+                </div>
+            {% endif %}
+            {#            <div class="widget-body">#}
+            {#                <div id="chart_lines_fill_nopoints" style="height: 250px;"></div>#}
+            {#            </div>#}
+        </div>
+
+        <div class="widget widget-4 widget-body-white">
+            <div class="widget-head">
+                <h4 class="heading">Ordered bars chart</h4>
+            </div>
+
+            {% if graph_bar_chart %}
+                <div>
+                    {{ graph_bar_chart|safe }}
+                </div>
+            {% endif %}
+
+            {#            <div class="widget-body">#}
+            {#                <div id="chart_ordered_bars" style="height: 250px;"></div>#}
+            {#            </div>#}
+        </div>
+
+        <div class="widget widget-4 widget-body-white">
+            <div class="widget-head">
+                <h4 class="heading">Donut chart</h4>
+            </div>
+
+            {% if graph_bonus_chart %}
+                <div>
+                    {{ graph_bonus_chart|safe }}
+                </div>
+            {% endif %}
+            {#            <div class="widget-body">#}
+            {#                <div id="chart_donut" style="height: 250px;"></div>#}
+            {#            </div>#}
+        </div>
+
+        <div class="widget widget-4 widget-body-white">
+            <div class="widget-head">
+                <h4 class="heading">Stacked bars chart</h4>
+            </div>
+
+            {% if graph_stacked_bar %}
+                <div>
+                    {{ graph_stacked_bar|safe }}
+                </div>
+            {% endif %}
+            {#            <div class="widget-body">#}
+            {#                <div id="chart_stacked_bars" style="height: 250px;"></div>#}
+            {#            </div>#}
+        </div>
+
+        <div class="widget widget-4 widget-body-white">
+            <div class="widget-head">
+                <h4 class="heading">Pie chart</h4>
+            </div>
+
+            {% if graph_pie_chart %}
+                <div>
+                    {{ graph_pie_chart|safe }}
+                </div>
+            {% endif %}
+            {#            <div class="widget-body">#}
+            {#                <div id="chart_pie" style="height: 250px;"></div>#}
+            {#            </div>#}
+        </div>
+
+        <div class="widget widget-4 widget-body-white">
+            <div class="widget-head">
+                <h4 class="heading">Horizontal bars chart</h4>
+            </div>
+            {% if graph_horizontal_chart %}
+                <div>
+                    {{ graph_horizontal_chart|safe }}
+                </div>
+            {% endif %}
+            {#            <div class="widget-body">#}
+            {#                <div id="chart_horizontal_bars" style="height: 250px;"></div>#}
+            {#            </div>#}
+        </div>
+        <div class="widget widget-4 widget-body-white">
+            <div class="widget-head">
+                <h4 class="heading">地图</h4>
+            </div>
+            {% if graph_mapchina %}
+                <div>
+                    {{ graph_mapchina|safe }}
+                </div>
+            {% endif %}
+            {#            <div class="widget-body">#}
+            {#                <div id="chart_horizontal_bars" style="height: 250px;"></div>#}
+            {#            </div>#}
+        </div>
+
+
+        {#        <div class="widget widget-4 widget-body-white">#}
+        {#            <div class="widget-head">#}
+        {#                <h4 class="heading">Auto updating chart</h4>#}
+        {#            </div>#}
+        {#            <div class="widget-body">#}
+        {#                <div id="chart_live" style="height: 250px;"></div>#}
+        {#            </div>#}
+        {#        </div>#}
+        <br/>
+    </div>
+</div>
+
+{% include 'buttom.html' %}
+</body>
+</html>

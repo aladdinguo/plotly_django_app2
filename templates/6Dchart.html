@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include 'head.html' %}
+<body>
+{% include 'menu.html' %}
+<div class="container-fluid fixed">
+    <div class="widget widget-4 widget-body-white">
+
+            {% if graph_four_chart %}
+                <div>
+                    {{ graph_four_chart|safe }}
+                </div>
+            {% endif %}
+            {#            <div class="widget-body">#}
+            {#                <div id="chart_horizontal_bars" style="height: 250px;"></div>#}
+            {#            </div>#}
+        </div>
+
+</div>
+{% include 'buttom.html' %}
+</body>
+</html>

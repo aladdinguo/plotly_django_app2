@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>    <html class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>    <html class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html> <!--<![endif]-->
+<head>
+    <title>智能数据可视化系统</title>
+
+    <!-- Meta -->
+    <meta charset="UTF-8"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+
+
+    <!-- Bootstrap -->
+    <!-- Bootstrap Extended -->
+    <link href="/static/bootstrap/extend/jasny-bootstrap/css/jasny-bootstrap.min.css" rel="stylesheet"/>
+    <link href="/static/bootstrap/extend/jasny-bootstrap/css/jasny-bootstrap-responsive.min.css" rel="stylesheet"/>
+    <link href="/static/bootstrap/extend/bootstrap-wysihtml5/css/bootstrap-wysihtml5-0.0.2.css" rel="stylesheet"/>
+
+    <!-- JQueryUI v1.9.2 -->
+    <link rel="stylesheet"
+          href="/static/theme/scripts/jquery-ui-1.9.2.custom/css/smoothness/jquery-ui-1.9.2.custom.min.css"/>
+
+    <!-- Glyphicons -->
+    <link rel="stylesheet" href="/static/theme/css/glyphicons.css"/>
+
+    <!-- Bootstrap Extended -->
+    <link rel="stylesheet" href="/static/bootstrap/extend/bootstrap-select/bootstrap-select.css"/>
+    <link rel="stylesheet"
+          href="/static/bootstrap/extend/bootstrap-toggle-buttons/static/stylesheets/bootstrap-toggle-buttons.css"/>
+
+    <!-- Uniform -->
+    <link rel="stylesheet" media="screen" href="/static/theme/scripts/pixelmatrix-uniform/css/uniform.default.css"/>
+
+    <!-- JQuery v1.8.2 -->
+    <script src="/static/theme/scripts/jquery-1.8.2.min.js"></script>
+
+    <!-- Modernizr -->
+    <script src="/static/theme/scripts/modernizr.custom.76094.js"></script>
+
+    <!-- MiniColors -->
+    <link rel="stylesheet" media="screen" href="/static/theme/scripts/jquery-miniColors/jquery.miniColors.css"/>
+
+    <!-- Theme -->
+    <link rel="stylesheet" href="/static/theme/css/style.min.css?1361377732"/>
+
+
+    <!-- LESS 2 CSS -->
+    <script src="/static/theme/scripts/less-1.3.3.min.js"></script>
+
+
+    <!--[if IE]><script type="text/javascript" src="static/theme/scripts/excanvas/excanvas.js"></script><![endif]-->
+    <!--[if lt IE 8]><script type="text/javascript" src="static/theme/scripts/json2.js"></script><![endif]-->
+
+
+    <!-- load plotly.js -->
+    <script src="/static/plotly-latest.min.js"></script>
+    <!--这是另外一个菜单的link-->
+    <link rel="stylesheet" href="/static/bootstrap/css/styles-merged.css">
+    <link rel="stylesheet" href="/static/bootstrap/css/style.min.css">
+    <script type="text/javascript">
+        function openUrl(url) {
+            window.open(url);
+        }
+    </script>
+
+
+<body class="login">
+
+<!-- Start Content -->
+<div class="container-fluid fixed">
+    <!--Modal login-->
+    <!--<div class="fadeInUp probootstrap-animated" id="loginModal" tabindex="-1" role="dialog"
+     aria-labelledby="loginModalLabel" aria-hidden="false">
+    <div class="vertical-alignment-helper">
+        <div class="modal-dialog modal-md vertical-align-center">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="false"><i
+                        class="icon-cross"></i></button>
+                <div class="probootstrap-modal-flex">
+                    <div class="probootstrap-modal-figure"
+                         style="background-image: url(/static/img/modal_bg.jpg);"></div>
+                    <div class="probootstrap-modal-content">
+                        <form action="#" class="probootstrap-form">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Username.jl">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" placeholder="Password">
+                            </div>
+                            <div class="form-group clearfix mb40">
+                                <label for="remember" class="probootstrap-remember"><input type="checkbox"
+                                                                                           id="remember">
+                                    记住用户</label>
+                                <a href="#" class="probootstrap-forgot">忘记密码？</a>
+                            </div>
+                            <div class="form-group text-left">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <input type="submit" class="btn btn-primary btn-block" value="Sign In">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>-->
+<!-- END modal login -->
+    <div id="content">
+        <div id="login">
+            <form class="form-signin" method="post" action="/loginuser/"/>{% csrf_token %}
+            <label class="strong">用户账号</label>
+            <input type="text" class="input-block-level" placeholder="UAAP用户姓名" name="name_id"/>
+            <label class="strong">用户密码</label>
+            <input type="password" class="input-block-level" placeholder="UAAP密码" name="password_id"/>
+
+            <div class="separator line"></div>
+            <span class="pull-left uniformjs"><label class="checkbox"><input type="checkbox" value="remember-me"/>记住我的账号密码</label></span>
+            <button class="btn btn-large btn-primary pull-right" type="submit">登录</button>
+
+            <div class="clearfix"></div>
+            </form>
+        </div>
+
+    </div>
+
+</div>
+
+
+
+{% include  'buttom.html' %}
+</body>
+</html>

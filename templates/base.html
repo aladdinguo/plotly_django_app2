@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "‐//W3C//DTD HTML 4.01//EN">
+<html lang="en">
+<head>
+    <title>Base-test</title>
+    <style type="text/css">
+        ul.errorlist {
+            margin: 0;
+            padding: 0;
+        }
+
+        .errorlist li {
+            background-color: red;
+            margin: 0 0 3px;
+            padding: 4px 5px;
+            font‐size: 10px;
+            display: block;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<h1>My helpful timestamp site</h1>
+<!-- ccbdata.html模板中块的内容 block content-->
+{% block content %}
+{% endblock %}
+
+{% block footer %}
+{% endblock %}
+<form action="" method="get">
+    <input type="text" name="q">
+    <input type="submit" value="Search">
+</form>
+<p>You searched for: <strong>{{ query }}</strong></p>
+{% if books %}
+    <p>Found {{ books|length }} book{{ books|pluralize }}.</p>
+    <ul>
+        {% for book in books %}
+            <li>{{ book.title }}</li> {% endfor %}
+    </ul>
+{% else %}
+    <p>No books matched your search criteria.</p>
+    <p>{{ error }}</p>
+
+{% endif %}
+<hr>
+<h1>Contact us</h1>
+{% if form.errors %}
+    <p style="color: red;">
+        Please correct the error{{ form.errors|pluralize }} below. </p>
+{% endif %}
+<form action="" method="post">
+    <div class="field">
+        {% csrf_token %}
+        {{ form.subject.errors }}
+        <label for="id_subject">Subject:</label> {{ form.subject }}
+    </div>
+    <div class="field">
+        {{ form.email.errors }}
+        <label for="id_email">Your e‐mail address:</label> {{ form.email }}
+    </div>
+    <div class="field">
+        {{ form.message.errors }}
+        <label for="id_message">Message:</label> {{ form.message }}
+    </div>
+    <input type="submit" value="Submit"></form>
+
+</body>
+</html>
