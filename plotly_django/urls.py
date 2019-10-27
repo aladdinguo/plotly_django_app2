@@ -17,6 +17,7 @@ from django.conf.urls import url,include
 from django.contrib import admin
 from plotlydjangoapp import views
 from plotlydjangoapp.ccbdata import current_datetime_locals
+from ccbjdz.views import CcbjdzListview,ccbjdzListchoice
 from books.views import display_meta, search_form, search, contact, signin, logout_view, upload_file
 
 urlpatterns = [
@@ -36,6 +37,8 @@ urlpatterns = [
     url(r'^product_edit', views.product_edit),
     url(r'^tables', views.tables),
     url(r'^jls1',views.jls1),
+    url(r'^jdzpage',CcbjdzListview.as_view(),name='jdzpage'),
+    url(r'selcet_item',ccbjdzListchoice.as_view(),name='selcet_item'),
     url(r'^ui', views.ui),
     url(r'^datain', views.datain),
     url(r'^uploadFile$', upload_file, name='uploadFile'),

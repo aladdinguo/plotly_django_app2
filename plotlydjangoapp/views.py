@@ -135,3 +135,6 @@ def datain(request):
 @login_required(login_url='do_login')
 def jls1(request):
     return render(request, 'jls1.html')
+@login_required(login_url='do_login')
+def jdz(request):
+    return  render(request,'templatesccb/jdzpage.html')

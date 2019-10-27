@@ -24,7 +24,7 @@ SECRET_KEY = '&#ooa&eubj_*9vh&ywax!^3!dds3ad(y&wb#hwf)8vh7@9m$#7'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
@@ -36,7 +36,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'plotlydjangoapp.apps.PlotlyDjangoConfig',
     'books',
-    'plotlydjangoapp'
+    'plotlydjangoapp',
+    'ccbjdz',
+    'ccbapp',
 ]
 
 MIDDLEWARE = [
@@ -83,15 +85,15 @@ DATABASES = {
         'PORT': '3306',  # 数据库使用的端口
 
     },
-    'ccbdb': {
-        'ENGINE': 'django.db.backends.mysql',  # 数据库引擎
-        'NAME': 'ccb-hp-test',  # 你要存储数据的库名，事先要创建之
-        'USER': 'root',  # 数据库用户名
-        'PASSWORD': 'jl123456',  # 密码
-        'HOST': '26.0.191.28',  # 主机
-        'PORT': '3306',  # 数据库使用的端口
-
-    }
+    # 'ccbdb': {
+    #     'ENGINE': 'django.db.backends.mysql',  # 数据库引擎
+    #     'NAME': 'ccb-hp-test',  # 你要存储数据的库名，事先要创建之
+    #     'USER': 'root',  # 数据库用户名
+    #     'PASSWORD': 'jl123456',  # 密码
+    #     'HOST': '26.0.191.28',  # 主机
+    #     'PORT': '3306',  # 数据库使用的端口
+    #
+    # }
 }
 DATABASE_ROUTERS = ['plotly_django.database_router.DatabaseAppsRouter']
 

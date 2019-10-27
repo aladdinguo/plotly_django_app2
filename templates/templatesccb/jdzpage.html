@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>    <html class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>    <html class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html> <!--<![endif]-->
+{% include 'head.html' %}
+<body>
+
+{% include 'menu.html' %}
+
+<!-- Start Content -->
+<form action="{% url 'selcet_item' %}" method="get">
+    <div class="container-fluid">
+        <div id="content">
+            <div class="widget widget-4 widget-body-white">
+                <div class="widget-head">
+                    <h4 class="heading">金点子数据</h4>
+                </div>
+                机构名称：
+
+                <select id="select_version" name="select_version">
+                    <option></option>
+                    {% for selectdata in allorganization %}
+                        <option>{{ selectdata.filloutorganization }}</option>
+                    {% endfor %}
+                </select>
+                <input type="submit" value="确定">
+                <div class="widget-body" style="padding: 10px 0 0;">
+                    <table class="dynamicTable table table-striped table-bordered table-primary table-condensed">
+                        <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>具体行名</th>
+                            <th>提出人</th>
+                            <th>详细描述</th>
+                            <th>亮点</th>
+                            <th>具体做法</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for list1 in ccbjdz_list %}
+                            <tr class="gradeX">
+                                <td>{{ list1.id }}</td>
+                                <td>{{ list1.department }}</td>
+                                <td>{{ list1.writer }}</td>
+                                <td>{{ list1.describe }}</td>
+                                <td class="center">{{ list1.creativityname }}</td>
+                                <td class="center">{{ list1.modusoperandi }}</td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                        <div id="pages" class="text-left">
+                            {% if page_obj %}
+                                {% if page_obj.has_previous %}
+                                    <a href="?page=1">首页</a>
+                                    <a href="?page={{ page_obj.previous_page_number }}">上一页 </a>
+                                {% endif %}
+                                Page {{ page_obj.number }} of {{ paginator.num_pages }}
+                                {% if page_obj.has_next %}
+                                    <a href="?page={{ page_obj.next_page_number }} ">下一页 </a>
+                                    <a href="?page={{ paginator.num_pages }}">末页</a>
+                                {% endif %}
+                            {% endif %}
+                        </div>
+                    </table>
+                    {% if page_obj %}
+                        {% if page_obj.has_previous %}
+                            <a href="?page={{ page_obj.previous_page_number }}">上一页 </a>
+                        {% endif %}
+                        Page {{ page_obj.number }} of {{ paginator.num_pages }}{% if page_obj.has_next %}
+                        <a href="?page={{ page_obj.next_page_number }} ">下一页 </a>
+                    {% endif %}
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+    </div>
+</form>
+
+{% include 'buttom.html' %}
+
+</body>
+</html>
