@@ -1,0 +1,17 @@
+<td>共{{ pagination.totalCnt }}条数据&nbsp</td>
+<td><a href="{{ pagination.urls }}?p=1&content={{ pagination.content }}">首页</a></td>
+{{ pagination.pageStr|safe }}
+<td><a href="{{ pagination.urls }}?p={{ pagination.page_nums }}&content={{ pagination.content }}">尾页</a></td>
+<td>
+    总页数: {{ pagination.page_nums }}
+</td>
+<td>&nbsp
+    <input type="text" name="pageNum" id="pageNum" style="width: 60px">
+    <button type="submit" onclick="fun()">跳转页</button>
+</td>
+<script>
+    function fun() {
+        var pageNum = document.getElementById('pageNum').value;
+        window.location.href = '{{ pagination.urls }}?content={{ pagination.content }}&p=' +pageNum;
+    }
+</script>

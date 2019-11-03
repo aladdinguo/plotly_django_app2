@@ -17,9 +17,9 @@ from django.conf.urls import url,include
 from django.contrib import admin
 from plotlydjangoapp import views
 from plotlydjangoapp.ccbdata import current_datetime_locals
-from ccbjdz.views import CcbjdzListview,ccbjdzListchoice
+from ccbjdz.views import CcbjdzListview,ccbjdzListchoice,seleIssue
+from ccbjdz import datacleans
 from books.views import display_meta, search_form, search, contact, signin, logout_view, upload_file
-
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^charts', views.charts),
@@ -37,8 +37,8 @@ urlpatterns = [
     url(r'^product_edit', views.product_edit),
     url(r'^tables', views.tables),
     url(r'^jls1',views.jls1),
-    url(r'^jdzpage',CcbjdzListview.as_view(),name='jdzpage'),
-    url(r'selcet_item',ccbjdzListchoice.as_view(),name='selcet_item'),
+    url(r'^selcet_item',seleIssue,name='selcet_item'), #选择列表，统计所有数据列出来，然后分类选择。
+    url(r'^dataclean',datacleans.readdataworksheet,name='dataclean'), #数据清理，把数据库里的文字后面多余的重复字符去掉。
     url(r'^ui', views.ui),
     url(r'^datain', views.datain),
     url(r'^uploadFile$', upload_file, name='uploadFile'),

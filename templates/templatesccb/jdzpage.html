@@ -6,78 +6,98 @@
 <html> <!--<![endif]-->
 {% include 'head.html' %}
 <body>
-
 {% include 'menu.html' %}
-
 <!-- Start Content -->
-<form action="{% url 'selcet_item' %}" method="get">
-    <div class="container-fluid">
-        <div id="content">
-            <div class="widget widget-4 widget-body-white">
-                <div class="widget-head">
-                    <h4 class="heading">金点子数据</h4>
-                </div>
-                机构名称：
 
-                <select id="select_version" name="select_version">
-                    <option></option>
-                    {% for selectdata in allorganization %}
-                        <option>{{ selectdata.filloutorganization }}</option>
-                    {% endfor %}
-                </select>
-                <input type="submit" value="确定">
-                <div class="widget-body" style="padding: 10px 0 0;">
-                    <table class="dynamicTable table table-striped table-bordered table-primary table-condensed">
-                        <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>具体行名</th>
-                            <th>提出人</th>
-                            <th>详细描述</th>
-                            <th>亮点</th>
-                            <th>具体做法</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        {% for list1 in ccbjdz_list %}
-                            <tr class="gradeX">
-                                <td>{{ list1.id }}</td>
-                                <td>{{ list1.department }}</td>
-                                <td>{{ list1.writer }}</td>
-                                <td>{{ list1.describe }}</td>
-                                <td class="center">{{ list1.creativityname }}</td>
-                                <td class="center">{{ list1.modusoperandi }}</td>
-                            </tr>
+
+<div class="container-fluid">
+    <form action="{% url 'dataclean' %}">
+        <input type="submit" value="数据清洗">
+    </form>
+    <div id="content">
+        <div class="widget widget-4 widget-body-white">
+            <div class="widget">
+                <h4 class="heading">选择机构</h4>
+                <form action="{% url 'selcet_item' %}" method="get">
+                    <select id="content" name="content">
+                        <option></option>
+                        {% for selectdata in allorganization %}
+                            <option>{{ selectdata.filloutorganization }}</option>
                         {% endfor %}
-                        </tbody>
-                        <div id="pages" class="text-left">
-                            {% if page_obj %}
-                                {% if page_obj.has_previous %}
-                                    <a href="?page=1">首页</a>
-                                    <a href="?page={{ page_obj.previous_page_number }}">上一页 </a>
-                                {% endif %}
-                                Page {{ page_obj.number }} of {{ paginator.num_pages }}
-                                {% if page_obj.has_next %}
-                                    <a href="?page={{ page_obj.next_page_number }} ">下一页 </a>
-                                    <a href="?page={{ paginator.num_pages }}">末页</a>
-                                {% endif %}
-                            {% endif %}
-                        </div>
-                    </table>
-                    {% if page_obj %}
-                        {% if page_obj.has_previous %}
-                            <a href="?page={{ page_obj.previous_page_number }}">上一页 </a>
-                        {% endif %}
-                        Page {{ page_obj.number }} of {{ paginator.num_pages }}{% if page_obj.has_next %}
-                        <a href="?page={{ page_obj.next_page_number }} ">下一页 </a>
-                    {% endif %}
-                    {% endif %}
-                </div>
+                    </select>
+                    <input type="submit" value="确定">
+                </form>
+            </div>
+
+            <div class="widget-body" style="padding: 10px 0 0;">
+                {% include 'pageindexIssue.html' %}
+                <table class="dynamicTable table table-striped table-bordered table-primary table-condensed"
+                       style="table-layout: fixed;word-wrap: break-word; word-break: break-all;" width="100%">
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>具体行名</th>
+                        <th>提出人</th>
+                        <th>详细描述</th>
+                        <th>亮点</th>
+                        <th>具体做法</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for list1 in issues %}
+                        <tr>
+                            <td width="5%" style="overflow:hidden;text-overflow: ellipsis;white-space: nowrap;word-break: break-all;"><a href="pages">{{ list1.id }}</a></td>
+                            <td width="10%" style="overflow:hidden;text-overflow: ellipsis;white-space: nowrap;word-break: break-all;">{{ list1.department }}</td>
+                            <td width="5%" style="overflow:hidden;text-overflow: ellipsis;word-break: break-all;">{{ list1.writer }}</td>
+                            <td width="40%" title="{{ list1.describe }}"
+                                style="overflow:hidden;text-overflow: ellipsis;white-space: nowrap;cursor: pointer;word-break: break-all;">{{ list1.describe }}</td>
+                            <td width="10" title="{{ list1.creativityname }}" style="overflow:hidden;text-overflow: ellipsis;white-space: nowrap;cursor: pointer;word-break: break-all;">{{ list1.creativityname }}</td>
+                            <td width="30" title="{{ list1.modusoperandi }}"
+                                style=";overflow:hidden;text-overflow: ellipsis;white-space: nowrap;cursor: pointer;word-break: break-all;">{{ list1.modusoperandi }}</td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                    {#                    {% if page_obj %}#}
+                    {#                        {% if page_obj.has_previous %}#}
+                    {#                            <a href="?page={{ page_obj.previous_page_number }}">上一页 </a>#}
+                    {#                        {% endif %}#}
+                    {#                        Page {{ page_obj.number }} of {{ paginator.num_pages }}{% if page_obj.has_next %}#}
+                    {#                        <a href="?page={{ page_obj.next_page_number }} ">下一页 </a>#}
+                    {#                    {% endif %}#}
+                    {#                    {% endif %}#}
+
+                    {#                        <ul class="am-pagination am-pagination-centered">#}
+                    {#                            <li>共{{ pagination.totalCnt }}条数据&nbsp</li>#}
+                    {#                            <li><a href="{{ pagination.urls }}?p=1">首页</a></li>#}
+                    {##}
+                    {#                            {{ pagination.pageStr|safe }}#}
+                    {##}
+                    {#                            <li><a href="{{ pagination.urls }}?p={{ pagination.page_nums }}">尾页</a></li>#}
+                    {#                            <li>#}
+                    {#                                总页数: {{ pagination.page_nums }}#}
+                    {#                            </li>#}
+                    {#                            <li>&nbsp;#}
+                    {#                                <input type="text" name="pageNum" id="pageNum" style="width: 60px">#}
+                    {#                                <button type="button" class="am-btn am-btn-default  am-btn-sm" οnclick="fun()">跳转页#}
+                    {#                                </button>#}
+                    {#                            </li>#}
+                    {#                        </ul>#}
+
+                </table>
+                {% include 'pageindexIssue.html' %}
+                {#                    {% if page_obj %}#}
+                {#                        {% if page_obj.has_previous %}#}
+                {#                            <a href="?page={{ page_obj.previous_page_number }}">上一页 </a>#}
+                {#                        {% endif %}#}
+                {#                        Page {{ page_obj.number }} of {{ paginator.num_pages }}{% if page_obj.has_next %}#}
+                {#                        <a href="?page={{ page_obj.next_page_number }} ">下一页 </a>#}
+                {#                    {% endif %}#}
+                {#                    {% endif %}#}
             </div>
         </div>
-
     </div>
-</form>
+
+</div>
 
 {% include 'buttom.html' %}
 
