@@ -1,10 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="455b5c4e-adfa-4b70-858f-9e019123b7d1" name="Default" comment="">
+    <list default="true" id="455b5c4e-adfa-4b70-858f-9e019123b7d1" name="Default" comment="增加金点子内容">
+      <change afterPath="$PROJECT_DIR$/ccbjdz/datacleans.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ccbjdz/page.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/pageindexIssue.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/313d0f12-85e5-40ac-b47c-c6efe45ae9d1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/313d0f12-85e5-40ac-b47c-c6efe45ae9d1/storage_v2/_src_/schema/sys.zb4BAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/313d0f12-85e5-40ac-b47c-c6efe45ae9d1/storage_v2/_src_/schema/sys.zb4BAA.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6140221a-8859-4d0c-955a-5e002f8ee9d3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6140221a-8859-4d0c-955a-5e002f8ee9d3/storage_v2/_src_/schema/ccb-manage-test.r_6avw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6140221a-8859-4d0c-955a-5e002f8ee9d3/storage_v2/_src_/schema/ccb-manage-test.r_6avw.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6140221a-8859-4d0c-955a-5e002f8ee9d3/storage_v2/_src_/schema/ccb-manage.kOETnw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6140221a-8859-4d0c-955a-5e002f8ee9d3/storage_v2/_src_/schema/ccb-manage.kOETnw.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6140221a-8859-4d0c-955a-5e002f8ee9d3/storage_v2/_src_/schema/sys.zb4BAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6140221a-8859-4d0c-955a-5e002f8ee9d3/storage_v2/_src_/schema/sys.zb4BAA.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d20b1d3d-ce85-495e-8c9e-d7f0715c2d1a.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plotly_django/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/plotly_django/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plotlydjangoapp/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/plotlydjangoapp/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/menu.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/templatesccb/jdzpage.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/templatesccb/jdzpage.html" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,13 +30,13 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/plotly_django_demo$plotly_flask.coverage" NAME="plotly_flask Coverage Results" MODIFIED="1518058572945" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/plotly_django_demo$manage.coverage" NAME="manage Coverage Results" MODIFIED="1518061403900" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../刘赣plotly_and_django/plotly_and_django" />
+    <SUITE FILE_PATH="coverage/plotly_django_demo$manage.coverage" NAME="manage Coverage Results" MODIFIED="1518061403900" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/刘赣plotly_and_django/plotly_and_django" />
     <SUITE FILE_PATH="coverage/plotly_django_demo$temp_NS.coverage" NAME="temp-NS Coverage Results" MODIFIED="1517976672713" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Documents/WeChat Files/sunshe35/Files" />
     <SUITE FILE_PATH="coverage/plotly_django_demo$manage__2_.coverage" NAME="manage (2) Coverage Results" MODIFIED="1518103586204" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/plotly_django_demo$xinyi.coverage" NAME="xinyi Coverage Results" MODIFIED="1518007555073" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../xinyi" />
     <SUITE FILE_PATH="coverage/plotly_django_demo$test_memory2.coverage" NAME="test_memory2 Coverage Results" MODIFIED="1518084263579" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.." />
-    <SUITE FILE_PATH="coverage/plotly_django_app2$manage.coverage" NAME="manage Coverage Results" MODIFIED="1518107059663" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../刘赣plotly_and_django/plotly_and_django" />
-    <SUITE FILE_PATH="coverage/plotly_django_app2$pt09_pyTorch.coverage" NAME="pt09_pyTorch Coverage Results" MODIFIED="1518277303332" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../王硕/PyTorch可视化工具/代码" />
+    <SUITE FILE_PATH="coverage/plotly_django_app2$manage.coverage" NAME="manage Coverage Results" MODIFIED="1518107059663" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/刘赣plotly_and_django/plotly_and_django" />
+    <SUITE FILE_PATH="coverage/plotly_django_app2$pt09_pyTorch.coverage" NAME="pt09_pyTorch Coverage Results" MODIFIED="1518277303332" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/王硕/PyTorch可视化工具/代码" />
     <SUITE FILE_PATH="coverage/plotly_django_demo$manage__1_.coverage" NAME="manage (1) Coverage Results" MODIFIED="1518100344948" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../plotly_django_app1" />
     <SUITE FILE_PATH="coverage/plotly_django_app2$manage__2_.coverage" NAME="manage (2) Coverage Results" MODIFIED="1563520699746" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv/bin" />
     <SUITE FILE_PATH="coverage/plotly_django_demo$test_memory1.coverage" NAME="test_memory1 Coverage Results" MODIFIED="1518083913700" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.." />
@@ -35,49 +52,11 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="books@localhost" type="feb32156:DbDataSourceImpl" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="books@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="books@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="books: schema" type="76f4a085:MysqlImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="Django default" type="feb32156:DbDataSourceImpl" />
-      </path>
-    </expand>
+    <expand />
     <select />
   </component>
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ccbapp/models.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/menu.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="31" column="64" lean-forward="true" selection-start-line="31" selection-start-column="64" selection-end-line="31" selection-end-column="64" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -85,113 +64,24 @@
         <option value="Flask Main" />
         <option value="HTTP Request" />
         <option value="Jupyter Notebook" />
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>website_traffic_overview</find>
-      <find>chart_simple</find>
-      <find>chart_simple`</find>
-      <find>chart_lines_fill_nopoints</find>
-      <find>newplot</find>
-      <find>plotly-graph-div</find>
-      <find>jquery-1.8.2.min</find>
-      <find>transparent</find>
-      <find>graph</find>
-      <find>google</find>
-      <find>http:</find>
-      <find>Horizontal bars chart</find>
-      <find>{</find>
-      <find>plotly</find>
-      <find>cars</find>
-      <find>nav</find>
-      <find>bookin</find>
-      <find>bootstrap.min.css</find>
-      <find>December 2012</find>
-      <find>登录系统</find>
-      <find>log</find>
-      <find>退出</find>
-      <find>Data Table</find>
-      <find>fina</find>
-      <find>file_managers</find>
-      <find>ccb</find>
-      <find>ContactForm</find>
-      <find>ccbdata</find>
-      <find>clean</find>
-      <find>cleaned_data</find>
-    </findStrings>
-    <replaceStrings>
-      <replace>=&quot;static/bootstrap/</replace>
-      <replace>=&quot;static/theme/</replace>
-    </replaceStrings>
-    <dirStrings>
-      <dir>F:\Project\plotly_django_demo\templates\bootstrap\css</dir>
-    </dirStrings>
-  </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="郭盛威" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GithubDefaultAccount">
-    <option name="defaultAccountId" value="1489eed8-bc93-4754-9e23-c980d6e82fa4" />
-  </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/e572386c-88b6-4a14-a659-1fec8a3a6c25/console.sql" />
-        <option value="$PROJECT_DIR$/books/__init__.py" />
-        <option value="$PROJECT_DIR$/plotly_django_app2/chart_plot.py" />
-        <option value="$PROJECT_DIR$/venv/lib/python3.7/site-packages/django/db/backends/mysql/base.py" />
-        <option value="$PROJECT_DIR$/venv/lib/python3.7/site-packages/django/db/backends/mysql/operations.py" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/d20b1d3d-ce85-495e-8c9e-d7f0715c2d1a/console.sql" />
-        <option value="$USER_HOME$/.conda/envs/plotly_django_app2/lib/python3.6/site-packages/django/db/backends/mysql/base.py" />
-        <option value="$USER_HOME$/.conda/envs/plotly_django_app2/lib/python3.6/site-packages/django/db/backends/mysql/operations.py" />
-        <option value="$PROJECT_DIR$/books/forms.py" />
-        <option value="$PROJECT_DIR$/plotlydjangoapp/gui.py" />
-        <option value="$PROJECT_DIR$/templates/calendar.html" />
-        <option value="$PROJECT_DIR$/templates/documentation.html" />
-        <option value="$PROJECT_DIR$/templates/finances.html" />
-        <option value="$PROJECT_DIR$/templates/form_demo.html" />
-        <option value="$PROJECT_DIR$/templates/form_elements.html" />
-        <option value="$PROJECT_DIR$/templates/form_validator.html" />
-        <option value="$PROJECT_DIR$/templates/gallery.html" />
-        <option value="$PROJECT_DIR$/templates/pages.html" />
-        <option value="$PROJECT_DIR$/templates/product_edit.html" />
-        <option value="$PROJECT_DIR$/templates/ui.html" />
-        <option value="$USER_HOME$/PycharmProjects/CCBVMS/venv/lib/python3.7/site-packages/django/db/backends/mysql/base.py" />
-        <option value="$USER_HOME$/PycharmProjects/CCBVMS/venv/lib/python3.7/site-packages/django/db/backends/mysql/operations.py" />
-        <option value="$PROJECT_DIR$/static/bootstrap/css/styles-merged.css" />
-        <option value="$PROJECT_DIR$/templates/6Dchart.html" />
-        <option value="$PROJECT_DIR$/templates/tables.html" />
-        <option value="$PROJECT_DIR$/templates/bookings.html" />
-        <option value="$PROJECT_DIR$/templates/buttom.html" />
-        <option value="$PROJECT_DIR$/templates/index.html" />
-        <option value="$PROJECT_DIR$/templates/login.html" />
-        <option value="$PROJECT_DIR$/templates/file_managers.html" />
-        <option value="$PROJECT_DIR$/templates/head.html" />
-        <option value="$PROJECT_DIR$/books/datatest.py" />
-        <option value="$PROJECT_DIR$/templates/datain.html" />
-        <option value="$PROJECT_DIR$/plotlydjangoapp/ccbdata.py" />
-        <option value="$PROJECT_DIR$/plotly_django/__init__.py" />
-        <option value="$PROJECT_DIR$/books/admin.py" />
-        <option value="$PROJECT_DIR$/templates/base.html" />
-        <option value="$PROJECT_DIR$/templates/ccbdata.html" />
-        <option value="$PROJECT_DIR$/books/views.py" />
-        <option value="$PROJECT_DIR$/plotlydjangoapp/equipment_info.py" />
-        <option value="$PROJECT_DIR$/plotlydjangoapp/views.py" />
-        <option value="$PROJECT_DIR$/plotly_django/urls.py" />
-        <option value="$PROJECT_DIR$/templates/index.html" />
-        <option value="$PROJECT_DIR$/templates/charts.html" />
-        <option value="$PROJECT_DIR$/templates/charts.html" />
-        <option value="$PROJECT_DIR$/plotlydjangoapp/chart_plot.py" />
-        <option value="$PROJECT_DIR$/plotly_django/database_router.py" />
-        <option value="$PROJECT_DIR$/books/models.py" />
-        <option value="$PROJECT_DIR$/plotly_django/settings.py" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/6140221a-8859-4d0c-955a-5e002f8ee9d3/console.sql" />
-        <option value="$PROJECT_DIR$/templates/menu.html" />
-      </list>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="$PROJECT_DIR$/.idea" />
+      </set>
     </option>
   </component>
   <component name="ProjectConfigurationFiles">
@@ -201,78 +91,31 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
-    <option name="width" value="1440" />
-    <option name="height" value="795" />
-  </component>
+  <component name="ProjectId" id="1SNjUxJ8qgWVUislBJtqzGxru0N" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="plotly_django_app2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="plotly_django_app2" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="plotly_django_app2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="plotly_django_app2" type="462c0819:PsiDirectoryNode" />
-              <item name="books" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="plotly_django_app2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="plotly_django_app2" type="462c0819:PsiDirectoryNode" />
-              <item name="ccbapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="plotly_django_app2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="plotly_django_app2" type="462c0819:PsiDirectoryNode" />
-              <item name="plotly_django" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="plotly_django_app2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="plotly_django_app2" type="462c0819:PsiDirectoryNode" />
-              <item name="plotlydjangoapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="plotly_django_app2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="plotly_django_app2" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
-  </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="TODO_SCOPE" value="All Places" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
     <property name="database.console.LAST_STATE" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/templatesccb" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/templates/templatesccb" />
+      <recent name="$PROJECT_DIR$/static/bootstrap" />
+      <recent name="$PROJECT_DIR$/templates" />
+      <recent name="$PROJECT_DIR$/static" />
+      <recent name="$PROJECT_DIR$/static/bootstrap/img" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/plotlydjangoapp" />
       <recent name="F:\Project\plotly_django_demo\plotly_django" />
       <recent name="F:\Project\plotly_django_demo" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/templates" />
-      <recent name="$PROJECT_DIR$/static" />
-      <recent name="$PROJECT_DIR$/static/bootstrap" />
-      <recent name="$PROJECT_DIR$/static/bootstrap/img" />
-      <recent name="$PROJECT_DIR$/static/bootstrap/css" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -425,6 +268,25 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="tests" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="plotly_django_app2" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="$PROJECT_DIR$/venv/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ccbjdz" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ccbjdz/tests.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="Python.DjangoServer" factoryName="Django server">
       <module name="plotly_django_app2" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -434,30 +296,6 @@
       </envs>
       <option name="SDK_HOME" value="$PROJECT_DIR$/venv/bin/python" />
       <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="launchJavascriptDebuger" value="false" />
-      <option name="port" value="8000" />
-      <option name="host" value="" />
-      <option name="additionalOptions" value="" />
-      <option name="browserUrl" value="" />
-      <option name="runTestServer" value="false" />
-      <option name="runNoReload" value="false" />
-      <option name="useCustomRunCommand" value="false" />
-      <option name="customRunCommand" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="plotly_django_app2" type="Python.DjangoServer" factoryName="Django server">
-      <module name="plotly_django_app2" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-        <env name="DJANGO_SETTINGS_MODULE" value="plotly_django.settings" />
-      </envs>
-      <option name="SDK_HOME" value="$USER_HOME$/PycharmProjects/OPMS/venv/bin/python" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/venv/bin" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
@@ -549,9 +387,11 @@
       <item itemvalue="Python.manage (2)" />
       <item itemvalue="Python.gui" />
       <item itemvalue="Python.datatest" />
+      <item itemvalue="Python.tests" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.tests" />
         <item itemvalue="Python.datatest" />
         <item itemvalue="JavaScript Debug.menu.html" />
         <item itemvalue="Python.gui" />
@@ -577,80 +417,43 @@
       <workItem from="1571197502883" duration="963000" />
       <workItem from="1571205780068" duration="224000" />
       <workItem from="1571209654338" duration="3473000" />
+      <workItem from="1571410970758" duration="6689000" />
+      <workItem from="1572080575653" duration="2832000" />
+      <workItem from="1572087559830" duration="20306000" />
+      <workItem from="1572258925525" duration="8004000" />
+      <workItem from="1572437235707" duration="4877000" />
+      <workItem from="1572442987327" duration="23662000" />
     </task>
+    <task id="LOCAL-00001" summary="增加金点子内容">
+      <created>1572188910594</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1572188910594</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4660000" />
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="795" extended-state="0" />
-    <editor active="true" />
-    <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15694444" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.3265306" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49785408" weight="0.38235295" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3255814" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32941177" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49676898" weight="0.28444445" />
-      <window_info anchor="bottom" id="Python Console" order="9" weight="0.32740742" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50214595" side_tool="true" weight="0.38235295" />
-      <window_info active="true" anchor="bottom" id="manage.py@plotly_django_demo" order="11" visible="true" weight="0.3289689" />
-      <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" weight="0.32941177" />
-      <window_info anchor="bottom" id="Database Changes" order="13" weight="0.3288889" />
-      <window_info anchor="bottom" id="Database Console" order="14" sideWeight="0.4985694" weight="0.30735293" />
-      <window_info anchor="bottom" id="REST Client" order="15" weight="0.45882353" />
-      <window_info anchor="bottom" id="manage.py@plotly_django_app2" order="16" show_stripe_button="false" weight="0.32941177" />
-      <window_info anchor="bottom" id="调试" order="17" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Data View" order="3" />
-      <window_info active="true" anchor="right" id="Database" order="4" sideWeight="0.4970588" visible="true" weight="0.2534722" />
-      <window_info anchor="right" id="SciView" order="5" />
-      <window_info anchor="right" id="R Graphics" order="6" />
-      <window_info anchor="right" id="R Packages" order="7" weight="0.32956383" />
-      <window_info anchor="right" x="0" y="0" width="270" height="595" id="Documentation" order="8" sideWeight="0.5029412" side_tool="true" weight="0.32956383" />
-    </layout>
-    <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19742814" />
-      <window_info id="Structure" order="1" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3927987" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3255814" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Python Console" order="9" weight="0.3289689" />
-      <window_info anchor="bottom" id="Terminal" order="10" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="right" id="Data View" order="4" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="增加金点子内容" />
+    <MESSAGE value="信息查询分页技术" />
+    <option name="LAST_COMMIT_MESSAGE" value="信息查询分页技术" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -663,351 +466,7 @@
       </breakpoints>
     </breakpoint-manager>
   </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/books/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plotlydjangoapp/admin.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/3/builtins.pyi">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9870">
-          <caret line="658" column="12" selection-start-line="658" selection-start-column="12" selection-end-line="658" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/PycharmProjects/OPMS/venv/lib/python3.7/site-packages/django/forms/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="431" column="8" selection-start-line="431" selection-start-column="8" selection-end-line="431" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/books/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/ccbdata.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="39" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/PycharmProjects/OPMS/venv/lib/python3.7/site-packages/django/contrib/auth/signals.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/PycharmProjects/OPMS/venv/lib/python3.7/site-packages/django/contrib/auth/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="160" column="14" selection-start-line="160" selection-start-column="14" selection-end-line="160" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plotlydjangoapp/equipment_info.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="33">
-          <caret line="52" column="24" selection-start-line="52" selection-start-column="24" selection-end-line="52" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="118" column="66" selection-start-line="118" selection-start-column="66" selection-end-line="118" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/books/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="89" column="20" selection-start-line="89" selection-start-column="20" selection-end-line="89" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plotly_django/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="47" column="30" selection-start-line="47" selection-start-column="30" selection-end-line="47" selection-end-column="30" />
-          <folding>
-            <element signature="e#647#687#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plotlydjangoapp/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="44" column="4" selection-start-line="44" selection-start-column="4" selection-end-line="44" selection-end-column="4" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/head.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/charts.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-28">
-          <caret line="14" column="45" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://d20b1d3d-ce85-495e-8c9e-d7f0715c2d1a/schema/books/table/equipment_info2">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/313d0f12-85e5-40ac-b47c-c6efe45ae9d1/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plotly_django/database_router.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="48" selection-start-line="48" selection-end-line="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plotlydjangoapp/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-783" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/books/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://d20b1d3d-ce85-495e-8c9e-d7f0715c2d1a/schema/books/table/auth_user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://d20b1d3d-ce85-495e-8c9e-d7f0715c2d1a/schema/books/table/equipment_org">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://313d0f12-85e5-40ac-b47c-c6efe45ae9d1/schema/books/table/auth_user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plotlydjangoapp/chart_plot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="915">
-          <caret line="65" column="19" selection-start-line="65" selection-start-column="19" selection-end-line="65" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plotly_django/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="106" column="18" lean-forward="true" selection-start-line="106" selection-start-column="18" selection-end-line="106" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://6140221a-8859-4d0c-955a-5e002f8ee9d3/schema/ccb-hp-test/table/tb_authority">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://6140221a-8859-4d0c-955a-5e002f8ee9d3/schema/ccb-hp-test/table/tb_base_code">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://6140221a-8859-4d0c-955a-5e002f8ee9d3/schema/ccb-hp-test/table/tb_depart">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://6140221a-8859-4d0c-955a-5e002f8ee9d3/schema/ccb-hp-test/table/tb_depart_user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://6140221a-8859-4d0c-955a-5e002f8ee9d3/schema/ccb-manage/table/act_evt_log">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://6140221a-8859-4d0c-955a-5e002f8ee9d3/schema/ccb-manage-v2/table/tb_organization">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://6140221a-8859-4d0c-955a-5e002f8ee9d3/schema/workflow/table/tb_deployment_and_human">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://6140221a-8859-4d0c-955a-5e002f8ee9d3/schema/workflow/table/tb_deployment">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://6140221a-8859-4d0c-955a-5e002f8ee9d3/schema/workflow/table/tb_instance">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://6140221a-8859-4d0c-955a-5e002f8ee9d3/schema/workflow/table/tb_instance_human_record">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://6140221a-8859-4d0c-955a-5e002f8ee9d3/schema/basedb/table/tb_depart">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://6140221a-8859-4d0c-955a-5e002f8ee9d3/schema/basedb/table/tb_depart_human">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering>
-            <filter text="40285681674464630167448151550016" />
-            <filter text="40285681674464630167448145830012" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://6140221a-8859-4d0c-955a-5e002f8ee9d3/schema/basedb/table/tb_human">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://6140221a-8859-4d0c-955a-5e002f8ee9d3/schema/basedb/table/tb_role">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://6140221a-8859-4d0c-955a-5e002f8ee9d3/schema/basedb/table/tb_project">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://6140221a-8859-4d0c-955a-5e002f8ee9d3/schema/basedb/table/tb_function">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="37" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/rest-api_1.http">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/rest-api.http">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ccbapp/models.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/6140221a-8859-4d0c-955a-5e002f8ee9d3/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="163" selection-start-column="163" selection-end-column="163" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://6140221a-8859-4d0c-955a-5e002f8ee9d3/schema/basedb/table/tb_employ">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="6425ccc9-1a3d-4710-bec0-0f81ebdec705">
-          <filtering />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://d20b1d3d-ce85-495e-8c9e-d7f0715c2d1a/schema/books/table/Originality">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="6425ccc9-1a3d-4710-bec0-0f81ebdec705">
-          <filtering>
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/menu.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="31" column="64" lean-forward="true" selection-start-line="31" selection-start-column="64" selection-end-line="31" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/plotly_django_app2$tests.coverage" NAME="tests Coverage Results" MODIFIED="1572526031909" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ccbjdz" />
   </component>
 </project>

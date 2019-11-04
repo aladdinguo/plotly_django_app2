@@ -1589,12 +1589,12 @@ a:hover, a:focus, a:active {
 
 /* Flexslider override style */
 .slider-height, .flexslider, .flexslider .slides > li {
-  height: 300px;
+  height: 100px;
 }
 
 @media screen and (max-width: 480px) {
   .slider-height, .flexslider, .flexslider .slides > li {
-    height: 300px;
+    height: 100px;
   }
 }
 
