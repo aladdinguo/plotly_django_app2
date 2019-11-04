@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>    <html class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>    <html class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html> <!--<![endif]-->
+{% include 'head.html' %}
+<body>
+
+{% include 'menu.html' %}
+
+<!-- Start Content -->
+<div class="container-fluid fixed">
+
+
+    <div id="content">
+        <div class="separator"></div>
+
+        <div class="heading-buttons">
+            <h3 class="glyphicons no-js notes"><i></i>详细内容智能分析</h3>
+            <div class="buttons pull-right">
+                <a href="" class="glyphicons no-js left_arrow btn btn-mini"><i></i> 回到上条记录</a>
+                <a href="" class="glyphicons no-js search btn btn-mini"><i></i>分析相似数据</a>
+            </div>
+        </div>
+        <div class="separator"></div>
+
+        <div class="widget widget-2 widget-tabs widget-tabs-2">
+            <div class="widget-head">
+                <ul>
+                    <li class="active"><a href="#productDescriptionTab" data-toggle="tab"
+                                          class="glyphicons font"><i></i>详细内容</a></li>
+                    <li><a href="#productPhotosTab" data-toggle="tab" class="glyphicons notes"><i></i>相似记录</a></li>
+                    <li><a href="#productAttributesTab" data-toggle="tab" class="glyphicons adjust_alt"><i></i>
+                    </a></li>
+                    <li><a href="#productPriceTab" data-toggle="tab" class="glyphicons table"><i></i>Qty & Price</a>
+                    </li>
+                    <li><a href="#productSeoTab" data-toggle="tab" class="glyphicons podium"><i></i>SEO</a></li>
+                </ul>
+            </div>
+            <div class="widget-body" style="padding: 20px 0 0;">
+                <div class="tab-content">
+
+                    <!-- Description -->
+                    {% for unit in detail_list %}
+                        <div class="tab-pane active" id="productDescriptionTab">
+                        <div class="row-fluid">
+                            <div class="span3">
+                                <strong>金点子名称:</strong>
+                                <td class="muted">{{ unit.creativityname }} </td>
+                            </div>
+                            <div class="span3">
+                                <strong for="inputTitle">行名:</strong>
+                                <td>{{ unit.filloutorganization }}</td>
+                                <div class="separator"></div>
+                            </div>
+                            <div class="span3">
+                                <strong for="inputTitle">姓名:</strong>
+                                <td>{{ unit.writer }}</td>
+                                <div class="separator"></div>
+                            </div>
+                            <div class="span3">
+                                <strong for="inputTitle">姓名:</strong>
+                                <td>{{ unit.phonenumber }}</td>
+                                <div class="separator"></div>
+                            </div>
+                        </div>
+                        <hr class="separator bottom"/>
+                        <div class="row-fluid">
+                            <div class="span3">
+                                <strong for="inputTitle">日期:</strong>
+                                <td>{{ unit.date }}</td>
+                                <div class="separator"></div>
+                            </div>
+                            <div class="span3">
+                                <strong for="inputTitle">类型:</strong>
+                                <td>{{ unit.creativitytype }}</td>
+                                <div class="separator"></div>
+                            </div>
+                            <div class="span3">
+                                <strong for="inputTitle">部门:</strong>
+                                <td>{{ unit.belongtodepartm }}</td>
+                                <div class="separator"></div>
+                            </div>
+                            <div class="span3">
+                                <strong for="inputTitle">种类:</strong>
+                                <td>{{ unit.category }}</td>
+                                <div class="separator"></div>
+                            </div>
+                        </div>
+                        <hr class="separator bottom"/>
+                        <div>
+                            <strong>亮点:</strong>
+                            <p class="muted" style="color: #1da1f2">{{ unit.creativitylightspot }}</p>
+                        </div>
+                        <div>
+                            <strong>描述:</strong>
+                            <p class="muted" style="color: #1da1f2">{{ unit.describe }}</p>
+                        </div>
+                        <div>
+                            <strong>做法:</strong>
+                            <p class="muted" style="color: #1da1f2;border-style:groove">{{ unit.modusoperandi }}</p>
+                        </div>
+
+
+                        <div style="margin:0">
+                            <strong>效益:</strong>
+                            <p class="muted" style="color: #1da1f2">{{ unit.benefitestimate }}</p>
+                        </div>
+
+
+                    {% endfor %}
+                    <!-- Description END -->
+
+                    <!-- Photos -->
+                    <div class="tab-pane" id="productPhotosTab">
+
+                    </div>
+                    <!-- Photos END -->
+
+                    <!-- Attributes -->
+                    <div class="tab-pane" id="productAttributesTab">
+
+                    </div>
+                    <!-- Attributes END -->
+
+                    <!-- Price -->
+                    <div class="tab-pane" id="productPriceTab">
+
+                    </div>
+                    <!-- Price END -->
+
+                    <!-- SEO -->
+                    <div class="tab-pane" id="productSeoTab">
+
+                    </div>
+                    <!-- SEO END -->
+
+                    </div>
+                </div>
+            </div>
+            <div class="heading-buttons">
+                <div class="buttons pull-right" style="margin-top: 0;">
+                    <a href="" class="glyphicons no-js left_arrow btn btn-mini"><i></i>回到上条记录</a>
+                    <a href="" class="glyphicons no-js search btn btn-mini"><i></i>分析相似数据</a>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+
+    </div>
+
+    {% include 'buttom.html' %}
+</body>
+</html>

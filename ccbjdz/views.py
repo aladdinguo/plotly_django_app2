@@ -18,20 +18,17 @@ class CommonListCcbjdz:
         return contexts
 
 
-class CcbjdzListview(CommonListCcbjdz, ListView):
+class CcbjdzListview(ListView):
     model = Worksheet
-    template_name = 'templatesccb/jdzpage.html'
-    context_object_name = 'ccbjdz_list'
-    paginate_by = 50
+    template_name = 'templatesccb/detail_list.html'
+    context_object_name = 'detail_list'
+    paginate_by = 10
 
 
 class ccbjdzListchoice(CcbjdzListview):
     def get_queryset(self):
-        qs = super().get_queryset()
-        if self.request.GET.get('select_version') == "":
-            select_content = super().get_queryset()
-        else:
-            select_content = qs.filter(filloutorganization=self.request.GET.get('select_version'))
+        qs = super().get_queryset().order_by('date')
+        select_content = qs.filter(id=self.request.GET.get('id')).values()
         return select_content
 
 
@@ -39,7 +36,6 @@ class ccbjdzListchoice(CcbjdzListview):
 #     issues = Worksheet.objects.all().order_by('id')
 #     issues1= Worksheet.objects.values('filloutorganization').annotate(
 #                 Count('filloutorganization')).order_by()
-#     print(type(issues),'郭盛威')
 #     # 分页
 #     currentPage = int(request.GET.get("p", 1))  # 当前页，如果没有默认1
 #     perPageCnt = 15  # 每页显示10个数据
@@ -56,15 +52,15 @@ class ccbjdzListchoice(CcbjdzListview):
 #     return render(request, "templatesccb/jdzpage.html", {"issues": issues, "pagination": pagination,'allorganization':issues1})
 
 
-def seleIssue(request):
+def seleIssue(request):  #根据条件选择需要的内容
     content = request.GET.get("content", None)
     issues1 = Worksheet.objects.values('filloutorganization').annotate(
         Count('filloutorganization')).order_by()
     # 判断是否有查询内容
     if content:
-        issues = Worksheet.objects.filter(Q(filloutorganization=content)).order_by('id')
+        issues = Worksheet.objects.filter(Q(filloutorganization=content)).order_by('id')  #条件选择
     else:
-        issues = Worksheet.objects.all().order_by('id')
+        issues = Worksheet.objects.all().order_by('id') #如果没有条件选择全部
     # 分页显示
     currentPage = int(request.GET.get("p", 1))  # 当前页，如果没有默认1
     perPageCnt = 15  # 每页显示10个数据

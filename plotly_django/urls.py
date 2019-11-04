@@ -14,6 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
 from django.conf.urls import url,include
+from django.views.generic import TemplateView
 from django.contrib import admin
 from plotlydjangoapp import views
 from plotlydjangoapp.ccbdata import current_datetime_locals
@@ -48,10 +49,11 @@ urlpatterns = [
     url(r'^contact$', contact),
     url(r'^current_date_time$', views.current_date_time),
     url(r'^current_datetime_locals', current_datetime_locals),
-    url(r'^6dchart', views.Dcharts),
+    url(r'^6Dchart', views.Dcharts),
     url(r'^loginuser/$', signin),
     url(r'^logoutuser$', logout_view, name='logout_view'),
     url(r'^start$', views.start, name='start'),
     url(r'^ccbdata',views.current_date_time),
+    url(r'^detail_list',ccbjdzListchoice.as_view()),
     url(r'^$', views.login1, name='do_login'),
 ]

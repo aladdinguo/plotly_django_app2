@@ -46,7 +46,7 @@
                     <tbody>
                     {% for list1 in issues %}
                         <tr>
-                            <td width="5%" style="overflow:hidden;text-overflow: ellipsis;white-space: nowrap;word-break: break-all;"><a href="pages">{{ list1.id }}</a></td>
+                            <td width="5%" style="overflow:hidden;text-overflow: ellipsis;white-space: nowrap;word-break: break-all;"><a href="detail_list?id={{ list1.id }}">{{ list1.id }}</a></td>
                             <td width="10%" style="overflow:hidden;text-overflow: ellipsis;white-space: nowrap;word-break: break-all;">{{ list1.department }}</td>
                             <td width="5%" style="overflow:hidden;text-overflow: ellipsis;word-break: break-all;">{{ list1.writer }}</td>
                             <td width="40%" title="{{ list1.describe }}"

@@ -371,22 +371,39 @@ class ChartPlot:
         axis_template = dict(
             showgrid=True,  # 网格
             zeroline=True,  # 是否显示基线,即沿着(0,0)画出x轴和y轴
-            # nticks=20,
+            nticks=20,
             showline=True,
-            title='X axis',
+            title='能力值',
+            mirror='all',
+            zerolinecolor="#eeeeee")
+        axis_template1 = dict(
+            showgrid=True,  # 网格
+            zeroline=True,  # 是否显示基线,即沿着(0,0)画出x轴和y轴
+            nticks=20,
+            showline=True,
+            title='贡献度',
             mirror='all',
             zerolinecolor="#FF0000")
+        axis_template2 = dict(
+            showgrid=True,  # 网格
+            zeroline=True,  # 是否显示基线,即沿着(0,0)画出x轴和y轴
+            nticks=20,
+            showline=True,
+            title='工资额',
+            mirror='all',
+            zerolinecolor="#dd0000")
         layout = go.Layout(
+            height=580,
             title='6D视图分析',
             margin=dict(
                 l=30,
                 r=30,
-                b=30,
-                t=30
+                b=0,
+                t=30,
             ),
             scene=dict(xaxis=axis_template,
-                       yaxis=axis_template,
-                       zaxis=axis_template)
+                       yaxis=axis_template1,
+                       zaxis=axis_template2)
         )
         fig = go.Figure(data=data, layout=layout)
         div = pyplt(fig, auto_open=False, show_link=False, include_plotlyjs=False, output_type='div')
