@@ -1,26 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="455b5c4e-adfa-4b70-858f-9e019123b7d1" name="Default" comment="增加金点子内容">
-      <change afterPath="$PROJECT_DIR$/ccbjdz/datacleans.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ccbjdz/page.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/pageindexIssue.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/313d0f12-85e5-40ac-b47c-c6efe45ae9d1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/313d0f12-85e5-40ac-b47c-c6efe45ae9d1/storage_v2/_src_/schema/sys.zb4BAA.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/313d0f12-85e5-40ac-b47c-c6efe45ae9d1/storage_v2/_src_/schema/sys.zb4BAA.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6140221a-8859-4d0c-955a-5e002f8ee9d3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6140221a-8859-4d0c-955a-5e002f8ee9d3/storage_v2/_src_/schema/ccb-manage-test.r_6avw.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6140221a-8859-4d0c-955a-5e002f8ee9d3/storage_v2/_src_/schema/ccb-manage-test.r_6avw.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6140221a-8859-4d0c-955a-5e002f8ee9d3/storage_v2/_src_/schema/ccb-manage.kOETnw.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6140221a-8859-4d0c-955a-5e002f8ee9d3/storage_v2/_src_/schema/ccb-manage.kOETnw.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6140221a-8859-4d0c-955a-5e002f8ee9d3/storage_v2/_src_/schema/sys.zb4BAA.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6140221a-8859-4d0c-955a-5e002f8ee9d3/storage_v2/_src_/schema/sys.zb4BAA.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d20b1d3d-ce85-495e-8c9e-d7f0715c2d1a.xml" beforeDir="false" />
+    <list default="true" id="455b5c4e-adfa-4b70-858f-9e019123b7d1" name="Default" comment="增加数据列表">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plotly_django/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/plotly_django/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plotlydjangoapp/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/plotlydjangoapp/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/menu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/templatesccb/jdzpage.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/templatesccb/jdzpage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ccbjdz/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/ccbjdz/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -52,7 +35,30 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand />
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="centos" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="centos" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="centos" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="books: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="centos" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="books: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="Worksheet: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+    </expand>
     <select />
   </component>
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
@@ -76,6 +82,7 @@
       </list>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="IgnoredFileRootStore">
     <option name="generatedRoots">
@@ -422,7 +429,7 @@
       <workItem from="1572087559830" duration="20306000" />
       <workItem from="1572258925525" duration="8004000" />
       <workItem from="1572437235707" duration="4877000" />
-      <workItem from="1572442987327" duration="23662000" />
+      <workItem from="1572442987327" duration="25836000" />
     </task>
     <task id="LOCAL-00001" summary="增加金点子内容">
       <created>1572188910594</created>
@@ -431,7 +438,28 @@
       <option name="project" value="LOCAL" />
       <updated>1572188910594</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="增加数据列表">
+      <created>1572791244952</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1572791244952</updated>
+    </task>
+    <task id="LOCAL-00003" summary="增加数据列表">
+      <created>1572791412778</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1572791412778</updated>
+    </task>
+    <task id="LOCAL-00004" summary="修改下一页显示">
+      <created>1572869125806</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1572869125807</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -453,7 +481,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="增加金点子内容" />
     <MESSAGE value="信息查询分页技术" />
-    <option name="LAST_COMMIT_MESSAGE" value="信息查询分页技术" />
+    <MESSAGE value="增加数据列表" />
+    <MESSAGE value="修改下一页显示" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改下一页显示" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
