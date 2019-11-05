@@ -81,3 +81,60 @@ def seleIssue(request):  #根据条件选择需要的内容
         issues = issues[0:10]
 
     return render(request, "templatesccb/jdzpage.html", {"issues": issues, "pagination": pagination,'allorganization':issues1})
+def txtcampare(self,**kwargs):
+    import jieba
+    from gensim import corpora, models, similarities
+    from collections import defaultdict
+    # 用于创建一个空的字典，在后续统计词频可清理频率少的词语
+    # 1、读取文档
+    # doc1="./d1.txt"
+    # doc2="./d2.txt"
+    d1 = "目前，我行点钞机有的是中钞信达，有的是聚龙，但这些点钞机仍存在一些瑕疵，定期需要厂家维修保养，同时过钱后灰尘较大，众所周知，柜员是辛苦的服务人员，每天要面对不停的现金，日前，网点接待某位客户的20万存款，均是长期受潮且发霉的现金，柜员过钱时灰尘都冒烟，同时还伴有酸臭味道。业务办理结束后，柜员的桌子上，衣服上甚至头发上都是灰尘。"
+    d2 = "由于身份证有使用期限，办理新身份证要等待时间，时间较长，客户需要等待，所以会有临时身份证的使用。还有未成年人拿户口本办业务.而有些客户办业务时，再走远程授权时，会拍摄交易场景的照片，在1019身份核查拍摄时，还会显示清晰度。如果清晰度不够可以重新拍摄，而在远程中的交易场景拍照里不显示，多次退回因为拍摄不清楚，客户也会有怨言。"
+    # 2、对要计算的文档进行分词
+    data1 = jieba.cut(d1)
+    data2 = jieba.cut(d2)
+    # 3、对分词完的数据进行整理为指定格式
+    data11 = ""
+    for i in data1:
+        data11 += i + " "
+    print(data11)
+    data21 = ""
+    for i in data2:
+        data21 += i + " "
+    documents = [data11, data21]
+    texts = [[word for word in document.split()] for document in documents]
+    print(texts)
+    # 4、 计算词语的频率
+    frequency = defaultdict(int)
+    for text in texts:
+        for word in text:
+            frequency[word] += 1
+    print(frequency)
+    '''
+    #5、对频率低的词语进行过滤（可选）
+    texts=[[word for word in text if frequency[word]>10] for text in texts]
+    '''
+    # 6、通过语料库将文档的词语进行建立词典
+    dictionary = corpora.Dictionary(texts)
+    dictionary.save("./dict.txt")  # 可以将生成的词典进行保存
+    # 7、加载要对比的文档
+    # doc3="./d3.txt"
+    d3 = "目前我行已实现柜面客户取号自动商机推荐和智慧机平板电脑和建行员工ap的商机推荐，但是在智慧柜员机渠道希望新增客户营销商机推荐，如在客户办理业务结束页面增加客户商机推荐，联动营销，增强营销成功率。在智慧柜员机结束页面也不会影响客户办理业务，也不会降低客户体验，相反可以增加我行的产品覆盖度和客户营销。"
+    data3 = jieba.cut(d3)
+    data31 = ""
+    for i in data3:
+        data31 += i + " "
+    # 8、将要对比的文档通过doc2bow转化为稀疏向量
+    new_xs = dictionary.doc2bow(data31.split())
+    # 9、对语料库进一步处理，得到新语料库
+    corpus = [dictionary.doc2bow(text) for text in texts]
+    # 10、将新语料库通过tf-idf model 进行处理，得到tfidf
+    tfidf = models.TfidfModel(corpus)
+    # 11、通过token2id得到特征数
+    featurenum = len(dictionary.token2id.keys())
+    # 12、稀疏矩阵相似度，从而建立索引
+    index = similarities.SparseMatrixSimilarity(tfidf[corpus], num_features=featurenum)
+    # 13、得到最终相似结果
+    sim = index[tfidf[new_xs]]
+    print(sim)
