@@ -5,6 +5,10 @@ from django.db.models import Count
 from django.shortcuts import render, HttpResponse, redirect
 from django.db.models import F, Q
 from ccbjdz.page import Pagination, PaginationQuery
+import codecs
+import jieba.posseg as psg
+import jieba
+from gensim import corpora, models, similarities
 
 
 # Create your views here.
@@ -14,11 +18,10 @@ class CommonListCcbjdz:
         contexts.update(
             {'allorganization': Worksheet.objects.values('filloutorganization').annotate(
                 Count('filloutorganization')).order_by()})
-
         return contexts
 
 
-class CcbjdzListview(ListView):
+class CcbjdzListview(CommonListCcbjdz, ListView):
     model = Worksheet
     template_name = 'templatesccb/detail_list.html'
     context_object_name = 'detail_list'
@@ -29,38 +32,27 @@ class ccbjdzListchoice(CcbjdzListview):
     def get_queryset(self):
         qs = super().get_queryset().order_by('date')
         select_content = qs.filter(id=self.request.GET.get('id')).values()
+        # print('aaa',type(select_content[0]),'aaa')
+        # print(select_content[0].get('id'))
+        # print(select_content[0].get('describe'))
+        print(select_content[0].get('createidentification'))
+        #下面内容是把describe字段的内容转化成词袋模型存储到数据库中
+        if select_content[0].get('createidentification') == None:
+            Worksheet.objects.filter(id=select_content[0].get('id')).update(
+                createidentification=similarcompare.tokenization_trainverctor(select_content[0].get('describe')))
+
         return select_content
 
 
-# def issueIndex(request):
-#     issues = Worksheet.objects.all().order_by('id')
-#     issues1= Worksheet.objects.values('filloutorganization').annotate(
-#                 Count('filloutorganization')).order_by()
-#     # 分页
-#     currentPage = int(request.GET.get("p", 1))  # 当前页，如果没有默认1
-#     perPageCnt = 15  # 每页显示10个数据
-#     totalCnt = Worksheet.objects.all().count()  # 获取全部数据个数
-#     pageIndexCnt = 6  # 显示页码 5个,
-#     pagination = Pagination(currentPage, perPageCnt, totalCnt, pageIndexCnt, request.path)
-#
-#     if currentPage > 0 and currentPage < pagination.page_nums:
-#         issues = issues[pagination.startNum:pagination.endNum]
-#     elif currentPage == pagination.page_nums:
-#         issues = issues[pagination.startNum::]
-#     else:
-#         issues = issues[0:10]
-#     return render(request, "templatesccb/jdzpage.html", {"issues": issues, "pagination": pagination,'allorganization':issues1})
-
-
-def seleIssue(request):  #根据条件选择需要的内容
+def seleIssue(request):  # 根据条件选择需要的内容
     content = request.GET.get("content", None)
     issues1 = Worksheet.objects.values('filloutorganization').annotate(
         Count('filloutorganization')).order_by()
     # 判断是否有查询内容
     if content:
-        issues = Worksheet.objects.filter(Q(filloutorganization=content)).order_by('id')  #条件选择
+        issues = Worksheet.objects.filter(Q(filloutorganization=content)).order_by('id')  # 条件选择
     else:
-        issues = Worksheet.objects.all().order_by('id') #如果没有条件选择全部
+        issues = Worksheet.objects.all().order_by('id')  # 如果没有条件选择全部
     # 分页显示
     currentPage = int(request.GET.get("p", 1))  # 当前页，如果没有默认1
     perPageCnt = 15  # 每页显示10个数据
@@ -80,9 +72,11 @@ def seleIssue(request):  #根据条件选择需要的内容
     else:
         issues = issues[0:10]
 
-    return render(request, "templatesccb/jdzpage.html", {"issues": issues, "pagination": pagination,'allorganization':issues1})
-def txtcampare(self,**kwargs):
-    import jieba
+    return render(request, "templatesccb/jdzpage.html",
+                  {"issues": issues, "pagination": pagination, 'allorganization': issues1})
+
+
+def txtcampare(self, **kwargs):
     from gensim import corpora, models, similarities
     from collections import defaultdict
     # 用于创建一个空的字典，在后续统计词频可清理频率少的词语
@@ -138,3 +132,34 @@ def txtcampare(self,**kwargs):
     # 13、得到最终相似结果
     sim = index[tfidf[new_xs]]
     print(sim)
+
+
+class similarcompare(ccbjdzListchoice):
+
+    def tokenization_trainverctor(txt):
+        textall = [txt]
+        print(textall)
+        stopwords = codecs.open('static/text/stopwords.txt',
+                                'r', encoding='utf8').readline()  # 读取停用词
+        stopwords = [w.strip() for w in stopwords]
+        stop_flag = ['x', 'c', 'u', 'd', 'p', 't', 'uj', 'm', 'f', 'r', 'y']
+        all_doc_list = []
+        for doc in textall:
+            print(doc)
+            result = []
+            for word, flag in psg.cut(doc):
+                if flag not in stop_flag and word not in stopwords:
+                    result.append(word)
+            all_doc_list.append(result)
+        dictionary = corpora.Dictionary(all_doc_list)
+        doc_vectors = [dictionary.doc2bow(text) for text in all_doc_list]
+        for delete_code in doc_vectors:
+            doc_vectors_N=delete_code
+        return doc_vectors_N
+
+    def update_record(self):
+        counts = Worksheet.objects.all().count()
+        for record in Worksheet.objects.values_list('id', 'describe', 'createidentification'):
+            if record.createidentification != None and record[0] == 1:
+                Worksheet.objects.filter(id=record[0]).update(
+                    createidentification=similarcompare.tokenization_trainverctor(record[1]))
