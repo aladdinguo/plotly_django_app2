@@ -5,6 +5,9 @@ from django.db.models import Count
 from django.shortcuts import render, HttpResponse, redirect
 from django.db.models import F, Q
 from ccbjdz.page import Pagination, PaginationQuery
+import codecs
+import jieba
+from gensim import corpora, models, similarities
 
 
 # Create your views here.
@@ -52,15 +55,15 @@ class ccbjdzListchoice(CcbjdzListview):
 #     return render(request, "templatesccb/jdzpage.html", {"issues": issues, "pagination": pagination,'allorganization':issues1})
 
 
-def seleIssue(request):  #根据条件选择需要的内容
+def seleIssue(request):  # 根据条件选择需要的内容
     content = request.GET.get("content", None)
     issues1 = Worksheet.objects.values('filloutorganization').annotate(
         Count('filloutorganization')).order_by()
     # 判断是否有查询内容
     if content:
-        issues = Worksheet.objects.filter(Q(filloutorganization=content)).order_by('id')  #条件选择
+        issues = Worksheet.objects.filter(Q(filloutorganization=content)).order_by('id')  # 条件选择
     else:
-        issues = Worksheet.objects.all().order_by('id') #如果没有条件选择全部
+        issues = Worksheet.objects.all().order_by('id')  # 如果没有条件选择全部
     # 分页显示
     currentPage = int(request.GET.get("p", 1))  # 当前页，如果没有默认1
     perPageCnt = 15  # 每页显示10个数据
@@ -80,9 +83,11 @@ def seleIssue(request):  #根据条件选择需要的内容
     else:
         issues = issues[0:10]
 
-    return render(request, "templatesccb/jdzpage.html", {"issues": issues, "pagination": pagination,'allorganization':issues1})
-def txtcampare(self,**kwargs):
-    import jieba
+    return render(request, "templatesccb/jdzpage.html",
+                  {"issues": issues, "pagination": pagination, 'allorganization': issues1})
+
+
+def txtcampare(self, **kwargs):
     from gensim import corpora, models, similarities
     from collections import defaultdict
     # 用于创建一个空的字典，在后续统计词频可清理频率少的词语
@@ -138,3 +143,25 @@ def txtcampare(self,**kwargs):
     # 13、得到最终相似结果
     sim = index[tfidf[new_xs]]
     print(sim)
+
+
+class similarcompare(ccbjdzListchoice):
+
+    def tokenization(txt):
+        stopwords = codecs.open('static/text/stopwords.txt', 'r', encoding='utf8').readline()
+        stopwords = [w.strip() for w in stopwords]
+        stop_flag = ['x', 'c', 'u', 'd', 'p', 't', 'uj', 'm', 'f', 'r']
+        result = []
+        words = jieba.posseg.cut(txt)
+        for word, flag in words:
+            if flag not in stop_flag and word not in stopwords:
+                result.append(word)
+        return result
+    def trainvector(self):  #建立词贷模型，
+        texttital=ccbjdzListchoice.get_queryset()
+        for each in texttital:
+            dictionary = corpora.Dictionary(similarcompare.tokenization(each))
+            print(dictionary)
+            doc_vectors = [dictionary.doc2bow(similarcompare.tokenization(each))]
+            print(doc_vectors)
+
