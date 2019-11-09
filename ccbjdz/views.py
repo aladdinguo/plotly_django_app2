@@ -163,3 +163,49 @@ class similarcompare(ccbjdzListchoice):
             if record.createidentification != None and record[0] == 1:
                 Worksheet.objects.filter(id=record[0]).update(
                     createidentification=similarcompare.tokenization_trainverctor(record[1]))
+def lsi_tfidf():
+    from gensim import corpora, models, similarities
+    import jieba
+    text = ''
+    text1 = '有时公众会误以为计算机科学就是解决计算机问题的事业（比如信息技术），或者只是与使用计算机的经验有关，如玩游戏、上网或者文字处理。其实计算机科学所关注的不仅仅是去理解实现类似游戏、浏览器这些软件的程序的性质，更是通过利用现有的知识创造新的程序或者改进已有的程序。计算机科学与技术是研究计算机的设计与制造，利用计算机进行信息获取、表示、存储、处理、控制等的理论、原则、方法和技术的专业。'
+    text2 = '计算机（computer）俗称电脑，是现代一种用于高速计算的电子计算机器，可以进行数值计算，又可以进行逻辑计算，还具有存储记忆功能。是能够按照程序运行，自动、高速处理海量数据的现代化智能电子设备。由硬件系统和软件系统所组成，没有安装任何软件的计算机称为裸机。可分为超级计算机、工业控制计算机、网络计算机、个人计算机、嵌入式计算机五类，较先进的计算机有生物计算机、光子计算机、量子计算机等。计算机发明者约翰·冯·诺依曼。计算机是20世纪最先进的科学技术发明之一，对人类的生产活动和社会活动产生了极其重要的影响，并以强大的生命力飞速发展。它的应用领域从最初的军事科研应用扩展到社会的各个领域，已形成了规模巨大的计算机产业，带动了全球范围的技术进步，由此引发了深刻的社会变革，计算机已遍及一般学校、企事业单位，进入寻常百姓家，成为信息社会中必不可少的工具。'
+    text3 = '计算机技术在高峰论坛上发表技术演讲，有关计算机的程序包括游戏，上网，处理文字等内容？'
+    keyword = '他指出，IPv6是中国参与全球互联网技术发展的重要契机。未来互联网的挑战将集中体现在互联网体系结构的研究和发展上。在2019全国高等教育信息化高峰论坛上，中国工程院院士、清华大学教授吴建平作了《构筑先进安全的国家高等教育和科技创新信息化基础设施》的主题发言。'
+    texts = [text1, text2, keyword, text3]
+
+    # print(texts)
+    texts = [jieba.lcut(text) for text in texts]
+    # print(texts)
+    dictionary = corpora.Dictionary(texts)
+    # print(dictionary.token2id,'guoshengwei')
+    num_features = len(dictionary.token2id)
+    # print(num_features)
+    corpus = [dictionary.doc2bow(text) for text in texts]
+    # print(corpus,'corpus')
+    tfidf = models.TfidfModel(corpus)
+    # print(tfidf,'tfidf')
+    new_vec = dictionary.doc2bow(jieba.lcut(keyword))
+    # print(new_vec,'new_vec')
+    # 相似度计算
+    # print(tfidf[corpus][1],'tidf[corpus]')
+    index = similarities.SparseMatrixSimilarity(tfidf[corpus], num_features)
+    print('\nTF-IDF模型的稀疏向量集：')
+    # for i in tfidf[corpus]:
+    #    print(i)
+    print('\nTF-IDF模型的keyword稀疏向量：')
+    # print(tfidf[new_vec])
+    print('\nTFidf相似度计算：')
+    sim = index[tfidf[new_vec]]
+    # print(sim)
+    for i in range(len(sim)):
+        print('第', i + 1, '句话的相似度为：', sim[i])
+        if sim[i] > 0.5:
+            print('第', i + 1, '句话的相似度为：', sim[i], '相似度为：', sim[i] / 1 * 100, '%')
+    lsi = models.LsiModel(tfidf[corpus], id2word=dictionary, num_topics=tfidf.num_docs)
+    index1 = similarities.MatrixSimilarity(lsi[tfidf[corpus]])
+    sims = index1[lsi[tfidf[new_vec]]]
+    print('Lsi相似度', sims)
+    for u in range(len(sims)):
+        print('第', u + 1, '段的相似度为：', sims[u])
+        if sims[u] > 0.5:
+            print('第', u + 1, '段的相似度为：', sims[u], '相似度为：', sims[u] / 1 * 100, '%')
